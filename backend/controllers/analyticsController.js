@@ -1,5 +1,5 @@
 const { HoldingsModel } = require("../model/HoldingsModel");
-const { WatchlistModel } = require("../model/WatchlistModel");
+const { WatchListModel } = require("../model/WatchListModel");
 
 const getAnalytics = async (req, res) => {
   try {
