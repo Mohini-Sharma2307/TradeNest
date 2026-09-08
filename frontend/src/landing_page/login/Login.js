@@ -46,17 +46,13 @@ function Login() {
 
       localStorage.setItem("token", token);
 
-      console.log(
-        "LOGIN TOKEN:",
-        localStorage.getItem("token")
-      );
+      console.log("LOGIN TOKEN:", localStorage.getItem("token"));
 
       // =========================
       // GET CURRENT THEME
       // =========================
 
-      const theme =
-        localStorage.getItem("theme") || "light";
+      const theme = localStorage.getItem("theme") || "light";
 
       // =========================
       // OPEN DASHBOARD
@@ -64,14 +60,13 @@ function Login() {
       // =========================
 
       window.location.href =
-        `http://localhost:3001/?token=${token}&theme=${theme}`;
-
+       `https://tradenest-dashboard-f19e.onrender.com/?token=${token}&theme=${theme}`;
     } catch (err) {
       console.log("Login Error:", err);
 
       setError(
         err.response?.data?.message ||
-          "Login failed. Please check your email and password."
+          "Login failed. Please check your email and password.",
       );
     } finally {
       setLoading(false);
@@ -81,16 +76,12 @@ function Login() {
   return (
     <section className="login-page">
       <div className="login-card">
-
         {/* =========================
             LOGO
         ========================= */}
 
         <Link to="/" className="login-logo">
-          <img
-            src="https://zerodha.com/static/images/logo.svg"
-            alt="Zerodha"
-          />
+          <img src="https://zerodha.com/static/images/logo.svg" alt="Zerodha" />
         </Link>
 
         {/* =========================
@@ -99,41 +90,30 @@ function Login() {
 
         <h1>Welcome back</h1>
 
-        <p className="login-subtitle">
-          Login to continue to your account
-        </p>
+        <p className="login-subtitle">Login to continue to your account</p>
 
         {/* =========================
             ERROR
         ========================= */}
 
-        {error && (
-          <div className="login-error">
-            {error}
-          </div>
-        )}
+        {error && <div className="login-error">{error}</div>}
 
         {/* =========================
             LOGIN FORM
         ========================= */}
 
         <form onSubmit={handleSubmit}>
-
           {/* EMAIL */}
 
           <div className="login-field">
-            <label htmlFor="email">
-              Email
-            </label>
+            <label htmlFor="email">Email</label>
 
             <input
               id="email"
               type="email"
               placeholder="Enter your email"
               value={email}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -141,17 +121,10 @@ function Login() {
           {/* PASSWORD */}
 
           <div className="login-field">
-
             <div className="password-label">
+              <label htmlFor="password">Password</label>
 
-              <label htmlFor="password">
-                Password
-              </label>
-
-              <a href="#forgot-password">
-                Forgot password?
-              </a>
-
+              <a href="#forgot-password">Forgot password?</a>
             </div>
 
             <input
@@ -159,26 +132,16 @@ function Login() {
               type="password"
               placeholder="Enter your password"
               value={password}
-              onChange={(e) =>
-                setPassword(e.target.value)
-              }
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
-
           </div>
 
           {/* LOGIN BUTTON */}
 
-          <button
-            type="submit"
-            className="login-button"
-            disabled={loading}
-          >
-            {loading
-              ? "Logging in..."
-              : "Login"}
+          <button type="submit" className="login-button" disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
           </button>
-
         </form>
 
         {/* =========================
@@ -196,10 +159,9 @@ function Login() {
         <button
           type="button"
           className="google-login"
-          onClick={() =>
-            setError(
-              // "Google login will be added later."
-            )
+          onClick={
+            () => setError()
+            // "Google login will be added later."
           }
         >
           <span>G</span>
@@ -211,10 +173,7 @@ function Login() {
         ========================= */}
 
         <p className="signup-text">
-          Don't have an account?{" "}
-          <Link to="/signup">
-            Create an account
-          </Link>
+          Don't have an account? <Link to="/signup">Create an account</Link>
         </p>
 
         {/* =========================
@@ -223,12 +182,8 @@ function Login() {
 
         <p className="login-terms">
           By continuing, you agree to our{" "}
-          <a href="#terms">
-            Terms & Conditions
-          </a>
-          .
+          <a href="#terms">Terms & Conditions</a>.
         </p>
-
       </div>
     </section>
   );

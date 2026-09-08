@@ -77,10 +77,7 @@ function Signup() {
 
       localStorage.setItem("token", token);
 
-      console.log(
-        "FRONTEND TOKEN:",
-        localStorage.getItem("token")
-      );
+      console.log("FRONTEND TOKEN:", localStorage.getItem("token"));
 
       // =========================
       // SUCCESS MESSAGE
@@ -99,16 +96,13 @@ function Signup() {
       // =========================
 
       setTimeout(() => {
-        window.location.href =
-          `http://localhost:3001/?token=${token}&theme=${theme}`;
+        window.location.href = `https://tradenest-dashboard-f19e.onrender.com/?token=${token}&theme=${theme}`;
       }, 1200);
-
     } catch (err) {
       console.log("Signup Error:", err);
 
       setError(
-        err.response?.data?.message ||
-          "Signup failed. Please try again."
+        err.response?.data?.message || "Signup failed. Please try again.",
       );
     } finally {
       setLoading(false);
@@ -118,16 +112,12 @@ function Signup() {
   return (
     <section className="signup-page">
       <div className="signup-card">
-
         {/* =========================
             LOGO
         ========================= */}
 
         <div className="signup-logo">
-          <img
-            src="https://zerodha.com/static/images/logo.svg"
-            alt="Zerodha"
-          />
+          <img src="https://zerodha.com/static/images/logo.svg" alt="Zerodha" />
         </div>
 
         {/* =========================
@@ -144,20 +134,14 @@ function Signup() {
             ERROR MESSAGE
         ========================= */}
 
-        {error && (
-          <div className="signup-message error-message">
-            {error}
-          </div>
-        )}
+        {error && <div className="signup-message error-message">{error}</div>}
 
         {/* =========================
             SUCCESS MESSAGE
         ========================= */}
 
         {success && (
-          <div className="signup-message success-message">
-            {success}
-          </div>
+          <div className="signup-message success-message">{success}</div>
         )}
 
         {/* =========================
@@ -165,13 +149,10 @@ function Signup() {
         ========================= */}
 
         <form onSubmit={handleSubmit}>
-
           {/* FULL NAME */}
 
           <div className="signup-field">
-            <label htmlFor="fullName">
-              Full Name
-            </label>
+            <label htmlFor="fullName">Full Name</label>
 
             <input
               id="fullName"
@@ -186,9 +167,7 @@ function Signup() {
           {/* EMAIL */}
 
           <div className="signup-field">
-            <label htmlFor="email">
-              Email
-            </label>
+            <label htmlFor="email">Email</label>
 
             <input
               id="email"
@@ -203,9 +182,7 @@ function Signup() {
           {/* PASSWORD */}
 
           <div className="signup-field">
-            <label htmlFor="password">
-              Password
-            </label>
+            <label htmlFor="password">Password</label>
 
             <input
               id="password"
@@ -219,16 +196,9 @@ function Signup() {
 
           {/* BUTTON */}
 
-          <button
-            type="submit"
-            className="signup-button"
-            disabled={loading}
-          >
-            {loading
-              ? "Creating Account..."
-              : "Create Account"}
+          <button type="submit" className="signup-button" disabled={loading}>
+            {loading ? "Creating Account..." : "Create Account"}
           </button>
-
         </form>
 
         {/* =========================
@@ -236,10 +206,7 @@ function Signup() {
         ========================= */}
 
         <p className="login-text">
-          Already have an account?{" "}
-          <Link to="/login">
-            Login
-          </Link>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
 
         {/* =========================
@@ -248,11 +215,8 @@ function Signup() {
 
         <p className="terms-text">
           By creating an account, you agree to our{" "}
-          <a href="#terms">
-            Terms & Conditions
-          </a>.
+          <a href="#terms">Terms & Conditions</a>.
         </p>
-
       </div>
     </section>
   );
