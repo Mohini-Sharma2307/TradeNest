@@ -20,7 +20,6 @@
     "express": "^5.2.1",
     "google-auth-library": "^11.0.2",
     "jsonwebtoken": "^9.0.3",
-    "mongoos": "^0.0.1-security",
     "mongoose": "^9.7.4",
     "nodemailer": "^10.0.0",
     "passport": "^0.7.0",
