@@ -1,9 +1,9 @@
-const { WatchlistModel } = require("../model/WatchlistModel");
+const { WatchListModel } = require("../model/WatchListModel");
 
 // Get Watchlist
 const getWatchlist = async (req, res) => {
   try {
-    const watchlist = await WatchlistModel.find({
+    const watchlist = await WatchListModel.find({
       userId: req.user.id,
     });
 
@@ -22,6 +22,7 @@ const getWatchlist = async (req, res) => {
 // Add Stock to Watchlist
 const addWatchlist = async (req, res) => {
   console.log("Request Body:", req.body);
+
   try {
     const { name, price, percent, isDown } = req.body;
 
@@ -32,7 +33,7 @@ const addWatchlist = async (req, res) => {
       });
     }
 
-    const alreadyExists = await WatchlistModel.findOne({
+    const alreadyExists = await WatchListModel.findOne({
       userId: req.user.id,
       name,
     });
@@ -44,7 +45,7 @@ const addWatchlist = async (req, res) => {
       });
     }
 
-    const stock = await WatchlistModel.create({
+    const stock = await WatchListModel.create({
       userId: req.user.id,
       name,
       price,
@@ -70,7 +71,7 @@ const removeWatchlist = async (req, res) => {
   try {
     const { name } = req.params;
 
-    const deleted = await WatchlistModel.findOneAndDelete({
+    const deleted = await WatchListModel.findOneAndDelete({
       userId: req.user.id,
       name,
     });
