@@ -1,0 +1,321 @@
+.footer {
+  background: #fbfbfb;
+  border-top: 1px solid #eee;
+  padding: 60px 0 25px;
+  color: #555;
+  font-family: Arial, sans-serif;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 55px;
+  padding-bottom: 45px;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777;
+}
+
+
+/* =========================
+   SOCIAL
+========================= */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px);
+  border-color: #387ed1;
+  background: #387ed1;
+}
+
+.footer-social a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+
+/* =========================
+   APP BUTTONS
+========================= */
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.app-buttons img {
+  width: 145px;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.app-buttons img:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-column h3 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 14px;
+}
+
+.footer-column a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #387ed1;
+  padding-left: 5px;
+}
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.footer-disclaimer {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.footer-disclaimer p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #888;
+  margin: 0 0 14px;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom span {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-bottom span:hover {
+  color: #387ed1;
+}
+
+
+/* ==================================================
+   DARK MODE
+================================================== */
+
+body.dark .footer {
+  background: #111827;
+  border-top-color: #334155;
+  color: #cbd5e1;
+}
+
+
+/* =========================
+   BRAND - DARK
+========================= */
+
+body.dark .copyright {
+  color: #94a3b8;
+}
+
+
+/* =========================
+   SOCIAL - DARK
+========================= */
+
+body.dark .footer-social a {
+  border-color: #475569;
+  background: #1e293b;
+}
+
+body.dark .footer-social a:hover {
+  border-color: #387ed1;
+  background: #387ed1;
+}
+
+
+/* =========================
+   FOOTER COLUMNS - DARK
+========================= */
+
+body.dark .footer-column h3 {
+  color: #f8fafc;
+}
+
+body.dark .footer-column a {
+  color: #cbd5e1;
+}
+
+body.dark .footer-column a:hover {
+  color: #60a5fa;
+}
+
+
+/* =========================
+   DISCLAIMER - DARK
+========================= */
+
+body.dark .footer-disclaimer {
+  border-top-color: #334155;
+}
+
+body.dark .footer-disclaimer p {
+  color: #94a3b8;
+}
+
+
+/* =========================
+   BOTTOM - DARK
+========================= */
+
+body.dark .footer-bottom {
+  border-top-color: #334155;
+}
+
+body.dark .footer-bottom span {
+  color: #94a3b8;
+}
+
+body.dark .footer-bottom span:hover {
+  color: #60a5fa;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer .container {
+    padding: 0 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-social {
+    gap: 14px;
+  }
+
+  .app-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

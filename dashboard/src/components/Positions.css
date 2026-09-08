@@ -1,0 +1,1403 @@
+/* =========================================================
+POSITIONS PAGE
+========================================================= */
+
+.positions-page {
+width: 100%;
+min-height: 100vh;
+
+padding: 28px 32px 50px;
+box-sizing: border-box;
+
+background: #f7f9fc;
+color: #222;
+
+overflow-x: hidden;
+
+transition:
+background 0.3s ease,
+color 0.3s ease;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.positions-header {
+width: 100%;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 20px;
+margin-bottom: 25px;
+}
+
+.positions-header h2 {
+margin: 0;
+
+font-size: 25px;
+font-weight: 600;
+
+color: #222;
+}
+
+.positions-subtitle {
+margin: 7px 0 0;
+
+font-size: 13px;
+color: #777;
+}
+
+/* =========================================================
+SEARCH
+========================================================= */
+
+.search-position {
+width: 260px;
+height: 40px;
+
+padding: 0 14px;
+box-sizing: border-box;
+
+border: 1px solid #d9d9d9;
+border-radius: 8px;
+
+outline: none;
+
+background: #fff;
+color: #222;
+
+font-size: 13px;
+
+transition:
+border-color 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.search-position::placeholder {
+color: #999;
+}
+
+.search-position:focus {
+border-color: #387ed1;
+
+box-shadow:
+0 0 0 3px rgba(56, 126, 209, 0.12);
+}
+
+/* =========================================================
+FILTER + SORT
+========================================================= */
+
+.positions-controls {
+width: 100%;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 20px;
+margin-bottom: 22px;
+}
+
+.position-filters {
+display: flex;
+align-items: center;
+
+gap: 8px;
+}
+
+/* =========================================================
+FILTER BUTTON
+========================================================= */
+
+.filter-btn {
+height: 35px;
+
+padding: 0 16px;
+
+border: 1px solid #d8d8d8;
+border-radius: 7px;
+
+background: #fff;
+color: #555;
+
+font-size: 12px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition:
+background 0.25s ease,
+color 0.25s ease,
+border-color 0.25s ease,
+transform 0.2s ease;
+}
+
+.filter-btn:hover {
+border-color: #387ed1;
+color: #387ed1;
+
+transform: translateY(-1px);
+}
+
+.filter-btn.active {
+background: #387ed1;
+border-color: #387ed1;
+color: #fff;
+}
+
+.filter-btn.active.profit-filter {
+background: #16a34a;
+border-color: #16a34a;
+}
+
+.filter-btn.active.loss-filter {
+background: #dc2626;
+border-color: #dc2626;
+}
+
+/* =========================================================
+SORT
+========================================================= */
+
+.position-sort {
+display: flex;
+align-items: center;
+
+gap: 9px;
+}
+
+.position-sort label {
+font-size: 13px;
+font-weight: 500;
+
+color: #666;
+}
+
+.position-sort select {
+height: 36px;
+min-width: 180px;
+
+padding: 0 30px 0 10px;
+
+border: 1px solid #d8d8d8;
+border-radius: 7px;
+
+background: #fff;
+color: #333;
+
+font-size: 12px;
+
+outline: none;
+cursor: pointer;
+
+transition:
+border-color 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.position-sort select:focus {
+border-color: #387ed1;
+
+box-shadow:
+0 0 0 3px rgba(56, 126, 209, 0.08);
+}
+
+/* =========================================================
+SUMMARY CARDS
+========================================================= */
+
+.summary-cards {
+width: 100%;
+
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+
+gap: 16px;
+
+margin-bottom: 25px;
+}
+
+.summary-card {
+min-height: 125px;
+
+padding: 20px;
+box-sizing: border-box;
+
+border: 1px solid #e5e7eb;
+border-radius: 10px;
+
+background: #fff;
+
+box-shadow:
+0 2px 8px rgba(0, 0, 0, 0.04);
+
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease,
+border-color 0.25s ease;
+}
+
+.summary-card:hover {
+transform: translateY(-3px);
+
+box-shadow:
+0 7px 18px rgba(0, 0, 0, 0.08);
+
+border-color: #dbe7f5;
+}
+
+.summary-card h5 {
+margin: 0 0 10px;
+
+font-size: 12px;
+font-weight: 600;
+
+color: #777;
+}
+
+.summary-card h2 {
+margin: 0;
+
+font-size: 23px;
+font-weight: 600;
+
+color: #222;
+}
+
+.summary-card small {
+display: block;
+
+margin-top: 7px;
+
+font-size: 11px;
+font-weight: 600;
+
+color: #888;
+}
+
+/* =========================================================
+PROFIT CARD
+========================================================= */
+
+.summary-card.profit {
+background: #f0fdf4;
+border-color: #bbf7d0;
+}
+
+.summary-card.profit h5,
+.summary-card.profit h2,
+.summary-card.profit small {
+color: #15803d;
+}
+
+/* =========================================================
+LOSS CARD
+========================================================= */
+
+.summary-card.loss {
+background: #fef2f2;
+border-color: #fecaca;
+}
+
+.summary-card.loss h5,
+.summary-card.loss h2,
+.summary-card.loss small {
+color: #dc2626;
+}
+
+/* =========================================================
+POSITION TABLE CARD
+========================================================= */
+
+.position-table-card {
+width: 100%;
+
+box-sizing: border-box;
+
+margin-bottom: 25px;
+
+border: 1px solid #e5e7eb;
+border-radius: 10px;
+
+background: #fff;
+
+box-shadow:
+0 2px 8px rgba(0, 0, 0, 0.04);
+
+overflow: hidden;
+}
+
+/* =========================================================
+TABLE HEADER
+========================================================= */
+
+.position-table-header {
+width: 100%;
+
+min-height: 72px;
+
+padding: 17px 22px;
+box-sizing: border-box;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+border-bottom: 1px solid #eeeeee;
+}
+
+.position-table-header h3 {
+margin: 0 0 5px;
+
+font-size: 17px;
+font-weight: 600;
+
+color: #222;
+}
+
+.position-table-header span {
+font-size: 11px;
+color: #888;
+}
+
+/* =========================================================
+TABLE WRAPPER
+NO HORIZONTAL / VERTICAL SCROLLBAR
+========================================================= */
+
+.position-table-wrapper {
+width: 100%;
+
+overflow: hidden;
+}
+
+/* =========================================================
+TABLE
+========================================================= */
+
+.position-table-card table {
+width: 100%;
+max-width: 100%;
+
+border-collapse: collapse;
+
+table-layout: fixed;
+}
+
+/* =========================================================
+TABLE HEADER
+========================================================= */
+
+.position-table-card thead {
+background: #f8f9fb;
+}
+
+.position-table-card th {
+height: 48px;
+
+padding: 0 7px;
+
+box-sizing: border-box;
+
+text-align: center;
+vertical-align: middle;
+
+border-bottom: 1px solid #e5e7eb;
+
+color: #666;
+
+font-size: 11px;
+font-weight: 600;
+
+white-space: nowrap;
+
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+/* =========================================================
+TABLE BODY
+========================================================= */
+
+.position-table-card td {
+height: 58px;
+
+padding: 0 7px;
+
+box-sizing: border-box;
+
+text-align: center;
+vertical-align: middle;
+
+border-bottom: 1px solid #f0f0f0;
+
+color: #444;
+
+font-size: 12px;
+
+white-space: nowrap;
+
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.position-table-card tbody tr {
+transition: background 0.2s ease;
+}
+
+.position-table-card tbody tr:hover {
+background: #f7fbff;
+}
+
+.position-table-card tbody tr:last-child td {
+border-bottom: none;
+}
+
+/* =========================================================
+COLUMN WIDTHS
+========================================================= */
+
+.position-table-card th:nth-child(1),
+.position-table-card td:nth-child(1) {
+width: 10%;
+}
+
+.position-table-card th:nth-child(2),
+.position-table-card td:nth-child(2) {
+width: 15%;
+}
+
+.position-table-card th:nth-child(3),
+.position-table-card td:nth-child(3) {
+width: 8%;
+}
+
+.position-table-card th:nth-child(4),
+.position-table-card td:nth-child(4) {
+width: 11%;
+}
+
+.position-table-card th:nth-child(5),
+.position-table-card td:nth-child(5) {
+width: 11%;
+}
+
+.position-table-card th:nth-child(6),
+.position-table-card td:nth-child(6) {
+width: 15%;
+}
+
+.position-table-card th:nth-child(7),
+.position-table-card td:nth-child(7) {
+width: 13%;
+}
+
+.position-table-card th:nth-child(8),
+.position-table-card td:nth-child(8) {
+width: 9%;
+}
+
+.position-table-card th:nth-child(9),
+.position-table-card td:nth-child(9) {
+width: 8%;
+}
+
+/* =========================================================
+PRODUCT BADGE
+========================================================= */
+
+.product-badge {
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+min-width: 40px;
+height: 24px;
+
+padding: 0 8px;
+
+box-sizing: border-box;
+
+border-radius: 5px;
+
+background: #eef4fb;
+color: #387ed1;
+
+font-size: 10px;
+font-weight: 700;
+}
+
+/* =========================================================
+INSTRUMENT
+========================================================= */
+
+.instrument-name {
+color: #222;
+
+font-size: 12px;
+font-weight: 600;
+}
+
+/* =========================================================
+PROFIT / LOSS
+========================================================= */
+
+.profit {
+color: #16a34a !important;
+font-weight: 700;
+}
+
+.loss {
+color: #dc2626 !important;
+font-weight: 700;
+}
+
+.pnl-cell strong,
+.return-cell strong {
+font-weight: 700;
+}
+
+/* =========================================================
+EXIT BUTTON
+========================================================= */
+
+.exit-btn {
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+min-width: 62px;
+height: 32px;
+
+padding: 0 12px;
+
+box-sizing: border-box;
+
+border: 1px solid #dc2626;
+border-radius: 6px;
+
+background: #dc2626;
+color: #fff;
+
+font-size: 10px;
+font-weight: 700;
+
+letter-spacing: 0.3px;
+
+cursor: pointer;
+
+transition:
+background 0.25s ease,
+border-color 0.25s ease,
+transform 0.2s ease,
+box-shadow 0.25s ease;
+}
+
+.exit-btn:hover {
+background: #b91c1c;
+border-color: #b91c1c;
+
+transform: translateY(-2px);
+
+box-shadow:
+0 5px 12px rgba(220, 38, 38, 0.2);
+}
+
+.exit-btn:active {
+transform: translateY(0);
+
+box-shadow: none;
+}
+
+/* =========================================================
+EMPTY STATE
+========================================================= */
+
+.empty-positions {
+height: 220px !important;
+}
+
+.empty-position-content {
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+}
+
+.empty-position-icon {
+margin-bottom: 10px;
+
+font-size: 35px;
+}
+
+.empty-position-content h3 {
+margin: 0 0 6px;
+
+font-size: 16px;
+font-weight: 600;
+
+color: #444;
+}
+
+.empty-position-content p {
+margin: 0;
+
+font-size: 12px;
+
+color: #888;
+}
+
+/* =========================================================
+EXIT MODAL OVERLAY
+========================================================= */
+
+.exit-modal-overlay {
+position: fixed;
+
+inset: 0;
+
+z-index: 9999;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 20px;
+
+box-sizing: border-box;
+
+background: rgba(15, 23, 42, 0.55);
+
+backdrop-filter: blur(4px);
+}
+
+/* =========================================================
+EXIT MODAL
+========================================================= */
+
+.exit-modal {
+width: 100%;
+max-width: 420px;
+
+padding: 28px;
+
+box-sizing: border-box;
+
+border-radius: 12px;
+
+background: #fff;
+
+box-shadow:
+0 20px 50px rgba(0, 0, 0, 0.20);
+
+text-align: center;
+
+animation: exitModalOpen 0.22s ease;
+}
+
+@keyframes exitModalOpen {
+from {
+opacity: 0;
+transform: translateY(12px) scale(0.98);
+}
+
+to {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+}
+
+/* =========================================================
+MODAL ICON
+========================================================= */
+
+.exit-modal-icon {
+width: 52px;
+height: 52px;
+
+margin: 0 auto 15px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background: #fff1f2;
+
+font-size: 24px;
+}
+
+.exit-modal h3 {
+margin: 0 0 8px;
+
+color: #222;
+
+font-size: 20px;
+font-weight: 600;
+}
+
+.exit-modal-message {
+margin: 0 0 20px;
+
+color: #777;
+
+font-size: 13px;
+line-height: 1.6;
+}
+
+/* =========================================================
+EXIT STOCK INFO
+========================================================= */
+
+.exit-stock-info {
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 10px;
+
+margin-bottom: 17px;
+}
+
+.exit-stock-info > div {
+padding: 12px;
+
+border: 1px solid #eeeeee;
+border-radius: 7px;
+
+background: #fafafa;
+
+text-align: left;
+}
+
+.exit-stock-info span {
+display: block;
+
+margin-bottom: 4px;
+
+color: #888;
+
+font-size: 10px;
+}
+
+.exit-stock-info strong {
+color: #333;
+
+font-size: 13px;
+font-weight: 600;
+}
+
+/* =========================================================
+MODAL NOTE
+========================================================= */
+
+.exit-modal-note {
+margin: 0 0 20px;
+
+color: #888;
+
+font-size: 11px;
+line-height: 1.5;
+}
+
+/* =========================================================
+MODAL BUTTONS
+========================================================= */
+
+.exit-modal-actions {
+display: flex;
+
+gap: 10px;
+}
+
+.cancel-exit-btn,
+.confirm-exit-btn {
+flex: 1;
+
+height: 40px;
+
+border-radius: 7px;
+
+font-size: 12px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition:
+background 0.25s ease,
+color 0.25s ease,
+border-color 0.25s ease,
+transform 0.2s ease;
+}
+
+.cancel-exit-btn {
+border: 1px solid #d8d8d8;
+
+background: #fff;
+color: #555;
+}
+
+.cancel-exit-btn:hover {
+background: #f5f5f5;
+}
+
+.confirm-exit-btn {
+border: 1px solid #dc2626;
+
+background: #dc2626;
+color: #fff;
+}
+
+.confirm-exit-btn:hover {
+background: #b91c1c;
+border-color: #b91c1c;
+
+transform: translateY(-1px);
+}
+
+/* =========================================================
+DARK MODE
+========================================================= */
+
+body.dark .positions-page {
+background: #0f172a;
+color: #fff;
+}
+
+body.dark .positions-header h2 {
+color: #fff;
+}
+
+body.dark .positions-subtitle {
+color: #94a3b8;
+}
+
+/* =========================================================
+DARK SEARCH
+========================================================= */
+
+body.dark .search-position {
+background: #1e293b;
+
+border-color: #334155;
+
+color: #fff;
+}
+
+body.dark .search-position::placeholder {
+color: #64748b;
+}
+
+body.dark .search-position:focus {
+border-color: #60a5fa;
+
+box-shadow:
+0 0 0 3px rgba(96, 165, 250, 0.10);
+}
+
+/* =========================================================
+DARK FILTER
+========================================================= */
+
+body.dark .filter-btn {
+background: #1e293b;
+
+border-color: #334155;
+
+color: #cbd5e1;
+}
+
+body.dark .filter-btn:hover {
+border-color: #60a5fa;
+color: #60a5fa;
+}
+
+body.dark .filter-btn.active {
+background: #2563eb;
+border-color: #2563eb;
+color: #fff;
+}
+
+body.dark .filter-btn.active.profit-filter {
+background: #15803d;
+border-color: #15803d;
+}
+
+body.dark .filter-btn.active.loss-filter {
+background: #dc2626;
+border-color: #dc2626;
+}
+
+/* =========================================================
+DARK SORT
+========================================================= */
+
+body.dark .position-sort label {
+color: #94a3b8;
+}
+
+body.dark .position-sort select {
+background: #1e293b;
+
+border-color: #334155;
+
+color: #e2e8f0;
+}
+
+/* =========================================================
+DARK SUMMARY
+========================================================= */
+
+body.dark .summary-card {
+background: #1e293b;
+
+border-color: #334155;
+
+box-shadow:
+0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .summary-card h5 {
+color: #94a3b8;
+}
+
+body.dark .summary-card h2 {
+color: #fff;
+}
+
+body.dark .summary-card small {
+color: #64748b;
+}
+
+body.dark .summary-card.profit {
+background: rgba(22, 163, 74, 0.12);
+
+border-color:
+rgba(34, 197, 94, 0.25);
+}
+
+body.dark .summary-card.profit h5,
+body.dark .summary-card.profit h2,
+body.dark .summary-card.profit small {
+color: #4ade80;
+}
+
+body.dark .summary-card.loss {
+background: rgba(220, 38, 38, 0.12);
+
+border-color:
+rgba(248, 113, 113, 0.25);
+}
+
+body.dark .summary-card.loss h5,
+body.dark .summary-card.loss h2,
+body.dark .summary-card.loss small {
+color: #f87171;
+}
+
+/* =========================================================
+DARK TABLE
+========================================================= */
+
+body.dark .position-table-card {
+background: #1e293b;
+
+border-color: #334155;
+
+box-shadow:
+0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .position-table-header {
+border-bottom-color: #334155;
+}
+
+body.dark .position-table-header h3 {
+color: #fff;
+}
+
+body.dark .position-table-header span {
+color: #64748b;
+}
+
+body.dark .position-table-card thead {
+background: #172033;
+}
+
+body.dark .position-table-card th {
+color: #94a3b8;
+
+border-bottom-color: #334155;
+}
+
+body.dark .position-table-card td {
+color: #cbd5e1;
+
+border-bottom-color: #334155;
+}
+
+body.dark .position-table-card tbody tr:hover {
+background: #243247;
+}
+
+body.dark .instrument-name {
+color: #fff;
+}
+
+body.dark .product-badge {
+background: rgba(96, 165, 250, 0.12);
+
+color: #60a5fa;
+}
+
+/* =========================================================
+DARK EXIT
+========================================================= */
+
+body.dark .exit-btn {
+background: rgba(220, 38, 38, 0.12);
+background: #dc2626;
+color: #efe7e7;
+
+}
+
+body.dark .exit-btn:hover {
+
+box-shadow:
+0 5px 14px rgba(239, 68, 68, 0.25);
+}
+
+/* =========================================================
+DARK EMPTY
+========================================================= */
+
+body.dark .empty-position-content h3 {
+color: #e2e8f0;
+}
+
+body.dark .empty-position-content p {
+color: #64748b;
+}
+
+/* =========================================================
+DARK MODAL
+========================================================= */
+
+body.dark .exit-modal {
+background: #1e293b;
+}
+
+body.dark .exit-modal h3 {
+color: #fff;
+}
+
+body.dark .exit-modal-message {
+color: #94a3b8;
+}
+
+body.dark .exit-modal-icon {
+background: rgba(220, 38, 38, 0.12);
+}
+
+body.dark .exit-stock-info > div {
+background: #172033;
+
+border-color: #334155;
+}
+
+body.dark .exit-stock-info span {
+color: #64748b;
+}
+
+body.dark .exit-stock-info strong {
+color: #e2e8f0;
+}
+
+body.dark .exit-modal-note {
+color: #64748b;
+}
+
+body.dark .cancel-exit-btn {
+background: #1e293b;
+
+border-color: #475569;
+
+color: #cbd5e1;
+}
+
+body.dark .cancel-exit-btn:hover {
+background: #334155;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+.positions-page {
+padding: 25px 22px 45px;
+}
+
+.summary-cards {
+gap: 12px;
+}
+
+.summary-card {
+padding: 16px;
+}
+
+.summary-card h2 {
+font-size: 20px;
+}
+
+.position-table-card th,
+.position-table-card td {
+padding-left: 5px;
+padding-right: 5px;
+
+
+font-size: 10px;
+
+
+}
+
+.exit-btn {
+min-width: 56px;
+height: 30px;
+
+padding: 0 8px;
+
+font-size: 9px;
+
+}
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+.positions-header {
+align-items: flex-start;
+
+
+flex-direction: colum
+
+}
+
+.search-position {
+width: 100%;
+max-width: 350px;
+}
+
+.positions-controls {
+align-items: flex-start;
+
+
+flex-direction: column;
+
+
+}
+
+.summary-cards {
+grid-template-columns:
+repeat(2, minmax(0, 1fr));
+}
+
+.position-table-card th,
+.position-table-card td {
+font-size: 9px;
+
+padding-left: 3px;
+padding-right: 3px;
+
+}
+
+.product-badge {
+min-width: 34px;
+height: 22px;
+
+
+padding: 0 5px;
+
+font-size: 8px;
+
+
+}
+
+.instrument-name {
+font-size: 10px;
+}
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+.positions-page {
+padding: 20px 14px 35px;
+}
+
+.positions-header h2 {
+font-size: 21px;
+}
+
+.positions-subtitle {
+font-size: 12px;
+}
+
+.position-filters {
+width: 100%;
+}
+
+.filter-btn {
+flex: 1;
+padding: 0 8px;
+
+}
+
+.position-sort {
+width: 100%;
+}
+
+.position-sort select {
+flex: 1;
+}
+
+.summary-cards {
+gap: 10px;
+}
+
+.summary-card {
+min-height: 105px;
+
+
+padding: 14px;
+
+
+}
+
+.summary-card h5 {
+font-size: 10px;
+}
+
+.summary-card h2 {
+font-size: 17px;
+}
+
+.summary-card small {
+font-size: 9px;
+}
+
+.position-table-header {
+padding: 15px;
+}
+
+.position-table-header h3 {
+font-size: 15px;
+}
+
+.position-table-card th {
+height: 42px;
+
+
+font-size: 8px;
+
+}
+
+.position-table-card td {
+height: 50px;
+
+
+font-size: 8px;
+
+padding-left: 2px;
+padding-right: 2px;
+
+
+}
+
+.exit-btn {
+min-width: 50px;
+
+
+height: 28px;
+
+padding: 0 6px;
+
+font-size: 8p
+
+}
+
+.exit-modal {
+max-width: 360px;
+
+
+padding: 22px;
+
+
+}
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+.positions-page {
+padding: 18px 10px 30px;
+}
+
+.summary-cards {
+grid-template-columns: 1fr;
+}
+
+.summary-card {
+min-height: 95px;
+}
+
+.position-filters {
+gap: 5px;
+}
+
+.filter-btn {
+padding: 0 6px;
+font-size: 9px;
+
+}
+
+.position-table-card th {
+font-size: 7px;
+}
+
+.position-table-card td {
+font-size: 7px;
+}
+
+.exit-btn {
+min-width: 46px;
+
+height: 26px;
+font-size: 7px;
+}
+
+.exit-modal-actions {
+flex-direction: column;
+}
+}

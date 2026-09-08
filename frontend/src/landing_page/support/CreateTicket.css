@@ -1,0 +1,312 @@
+
+/* =========================
+   CREATE TICKET SECTION
+========================= */
+
+.create-ticket-section {
+  padding: 80px 0 100px;
+  background: #ffffff;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.ticket-heading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.ticket-heading > span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #387ed1;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.ticket-heading h2 {
+  margin-bottom: 14px;
+
+  color: #222222;
+
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.ticket-heading p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SUPPORT TOPICS GRID
+========================= */
+
+.support-topics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   SUPPORT TOPIC CARD
+========================= */
+
+.support-topic-card {
+  min-height: 360px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.support-topic-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #d5e5f7;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   TOPIC TITLE
+========================= */
+
+.topic-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.topic-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  background: #edf5fd;
+
+  border-radius: 8px;
+
+  font-size: 19px;
+}
+
+.topic-title h3 {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   TOPIC LINKS
+========================= */
+
+.topic-links {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.topic-links a {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 9px 0;
+
+  color: #387ed1;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #f4f4f4;
+
+  transition:
+    padding 0.2s ease,
+    color 0.2s ease;
+}
+
+.topic-links a:last-child {
+  border-bottom: none;
+}
+
+.topic-links a:hover {
+  padding-left: 4px;
+
+  color: #2f6fba;
+}
+
+.topic-links a span {
+  margin-left: 8px;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.topic-links a:hover span {
+  opacity: 1;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark .create-ticket-section {
+  background: #0f172a;
+}
+
+body.dark .ticket-heading > span {
+  color: #60a5fa;
+}
+
+body.dark .ticket-heading h2 {
+  color: #ffffff;
+}
+
+body.dark .ticket-heading p {
+  color: #cbd5e1;
+}
+
+body.dark .support-topic-card {
+  background: #1e293b;
+
+  border-color: #334155;
+}
+
+body.dark .support-topic-card:hover {
+  border-color: #475569;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .topic-title {
+  border-bottom-color: #334155;
+}
+
+body.dark .topic-icon {
+  background: #0f172a;
+}
+
+body.dark .topic-title h3 {
+  color: #ffffff;
+}
+
+body.dark .topic-links a {
+  color: #60a5fa;
+
+  border-bottom-color: #334155;
+}
+
+body.dark .topic-links a:hover {
+  color: #93c5fd;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .create-ticket-section {
+    padding: 65px 20px 80px;
+  }
+
+  .support-topics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .create-ticket-section {
+    padding: 50px 18px 65px;
+  }
+
+  .ticket-heading {
+    margin-bottom: 40px;
+  }
+
+  .ticket-heading h2 {
+    font-size: 25px;
+  }
+
+  .ticket-heading p {
+    font-size: 14px;
+  }
+
+  .support-topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-topic-card {
+    min-height: auto;
+
+    padding: 23px;
+  }
+
+  .topic-title h3 {
+    font-size: 17px;
+  }
+
+  .topic-links a {
+    font-size: 13px;
+  }
+
+}
+

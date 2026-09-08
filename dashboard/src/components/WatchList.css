@@ -1,0 +1,515 @@
+.watchlist-container {
+  flex-basis: 32%;
+  height: 100%;
+
+  /* Light Mode */
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  color: #222;
+
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  overflow-y: auto;
+  position: relative;
+
+  transition: 0.3s;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: #ffffff;
+
+  padding: 15px;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.search {
+  width: 100%;
+
+  padding: 12px 16px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ddd;
+
+  background: #ffffff;
+
+  color: #222;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  box-sizing: border-box;
+}
+
+.search:focus {
+  border-color: #387ed1;
+
+  box-shadow: 0 0 0 3px rgba(56, 126, 209, 0.15);
+}
+
+.search::placeholder {
+  color: #777;
+}
+
+
+/* =========================
+   COUNTS
+========================= */
+
+.counts {
+  position: absolute;
+
+  right: 28px;
+  top: 28px;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+.list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin: 8px 10px;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: none;
+
+  background: #ffffff;
+
+  color: #222;
+
+  transition: 0.25s ease;
+
+  position: relative;
+}
+
+.list li:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   ITEM
+========================= */
+
+.item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.itemInfo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================
+   STOCK NAME
+========================= */
+
+.item p {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+  font-weight: 600;
+
+  color: #333;
+}
+
+
+/* =========================
+   PERCENT
+========================= */
+
+.percent {
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #555;
+}
+
+
+/* =========================
+   GREEN
+========================= */
+
+.up {
+  color: #00b746 !important;
+
+  font-weight: 600;
+}
+
+.item p.up {
+  color: #00b746 !important;
+}
+
+
+/* =========================
+   RED
+========================= */
+
+.down {
+  color: #e53935 !important;
+
+  font-weight: 600;
+}
+
+.item p.down {
+  color: #e53935 !important;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding-right: 15px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.25s;
+}
+
+.list li:hover .actions {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+
+/* =========================
+   BUY
+========================= */
+
+.buy {
+  background: #387ed1;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 6px;
+
+  padding: 7px 16px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.buy:hover {
+  background: #2d6db7;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SELL
+========================= */
+
+.sell {
+  background: #ff5722;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 6px;
+
+  padding: 7px 16px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.sell:hover {
+  background: #e64a19;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   ACTION ICON
+========================= */
+
+.action {
+  width: 36px;
+
+  height: 36px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f5f5f5;
+
+  color: #333;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: 0.25s;
+}
+
+.action:hover {
+  background: #387ed1;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 18px;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.watchlist-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.watchlist-container::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.watchlist-container::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+
+  border-radius: 20px;
+}
+
+.watchlist-container::-webkit-scrollbar-thumb:hover {
+  background: #9f9f9f;
+}
+
+
+/* =========================
+   CANVAS
+========================= */
+
+canvas {
+  padding: 15px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark .watchlist-container {
+  /* Same as Holdings Cards */
+  background: #1e293b;
+
+  color: #ffffff;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Search Header */
+
+body.dark .search-container {
+  background: #1e293b;
+
+  border-bottom: 1px solid #334155;
+}
+
+
+/* Search Input */
+
+body.dark .search {
+  background: #334155;
+
+  color: #ffffff;
+
+  border: 1px solid #475569;
+}
+
+body.dark .search::placeholder {
+  color: #cbd5e1;
+}
+
+
+/* Counts */
+
+body.dark .counts {
+  color: #cbd5e1;
+}
+
+
+/* List Items */
+
+body.dark .list li {
+  background: #1e293b;
+
+  color: #ffffff;
+}
+
+
+/* Stock Name */
+
+body.dark .item p {
+  color: #ffffff;
+}
+
+
+/* Price */
+
+body.dark .price {
+  color: #ffffff;
+}
+
+
+/* Percentage */
+
+body.dark .percent {
+  color: #cbd5e1;
+}
+
+
+/* GREEN - Always Green */
+
+body.dark .up,
+body.dark .item p.up {
+  color: #00b746 !important;
+}
+
+
+/* RED - Always Red */
+
+body.dark .down,
+body.dark .item p.down {
+  color: #e53935 !important;
+}
+
+
+/* Action Icon */
+
+body.dark .action {
+  background: #334155;
+
+  color: #ffffff;
+}
+
+body.dark .action:hover {
+  background: #387ed1;
+
+  color: #ffffff;
+}
+
+
+/* Scrollbar */
+
+body.dark .watchlist-container::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+body.dark .watchlist-container::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+body.dark .watchlist-container::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .watchlist-container {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    padding: 12px;
+  }
+
+  .list li {
+    margin: 6px;
+
+    padding: 12px;
+  }
+}

@@ -1,0 +1,148 @@
+
+/* =========================================
+   PRODUCTS HERO
+========================================= */
+
+.products-hero {
+  width: 100%;
+  padding-bottom: 10px;
+
+  background: #ffffff;
+
+  border-bottom-color: #eeeeee !important;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.products-hero h1 {
+  margin: 0;
+
+  color: #222222 !important;
+
+  font-size: 40px;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.products-hero-subtitle {
+  color: #666666 !important;
+
+  font-weight: 400;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.products-hero-description {
+  color: #555555 !important;
+
+  font-size: 16px;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   LINK
+========================================= */
+
+.products-hero-link {
+  color: #387ed1 !important;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.products-hero-link:hover {
+  color: #2f6fba !important;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .products-hero {
+  background: #0f172a !important;
+
+  border-bottom-color: #334155 !important;
+}
+
+body.dark .products-hero h1 {
+  color: #ffffff !important;
+}
+
+body.dark .products-hero-subtitle {
+  color: #cbd5e1 !important;
+}
+
+body.dark .products-hero-description {
+  color: #cbd5e1 !important;
+}
+
+body.dark .products-hero-link {
+  color: #60a5fa !important;
+}
+
+body.dark .products-hero-link:hover {
+  color: #93c5fd !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .products-hero h1 {
+    font-size: 34px;
+  }
+
+  .products-hero-subtitle {
+    font-size: 20px !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+  .products-hero {
+    padding-bottom: 5px;
+  }
+
+  .products-hero h1 {
+    font-size: 30px;
+  }
+
+  .products-hero-subtitle {
+    font-size: 18px !important;
+  }
+
+  .products-hero-description {
+    font-size: 15px;
+  }
+
+}
+

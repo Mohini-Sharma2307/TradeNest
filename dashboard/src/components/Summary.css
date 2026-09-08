@@ -1,0 +1,288 @@
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.summary-card {
+  min-width: 0;
+
+  background: linear-gradient(
+    135deg,
+    var(--card-bg),
+    var(--hover-bg)
+  );
+
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   CARD HEADING
+========================= */
+
+.summary-card h4 {
+  margin: 0;
+
+  color: var(--secondary-text);
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   CARD VALUE
+========================= */
+
+.summary-card h2 {
+  margin-top: 12px;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: var(--text-color);
+}
+
+
+/* =========================
+   CARD DESCRIPTION
+========================= */
+
+.summary-card p {
+  margin-top: 8px;
+
+  color: var(--secondary-text);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   PROFIT / LOSS
+========================= */
+
+.profit {
+  color: #2e7d32 !important;
+}
+
+.loss {
+  color: #d32f2f !important;
+}
+
+
+/* =========================
+   PORTFOLIO CARD
+========================= */
+
+.portfolio-card {
+  margin-top: 25px;
+
+  background: var(--card-bg);
+  color: var(--text-color);
+
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card h3 {
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  color: var(--text-color);
+}
+
+
+/* =========================
+   SUMMARY CONTAINER
+========================= */
+
+.summary-container {
+  padding: 25px;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+/* =========================
+   USERNAME
+========================= */
+
+.username h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: var(--text-color);
+}
+
+.username p {
+  margin-top: 8px;
+
+  color: var(--secondary-text);
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  margin: 20px 0;
+
+  border: none;
+
+  border-top: 1px solid var(--border-color);
+}
+
+
+/* =========================
+   RECENT ORDERS
+========================= */
+
+.recent-orders {
+  margin-top: 35px;
+
+  background: var(--card-bg);
+  color: var(--text-color);
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.recent-orders h3 {
+  margin-bottom: 20px;
+
+  color: var(--text-color);
+}
+
+.recent-orders table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.recent-orders th {
+  text-align: left;
+
+  padding: 12px;
+
+  border-bottom: 1px solid var(--border-color);
+
+  color: var(--secondary-text);
+}
+
+.recent-orders td {
+  padding: 12px;
+
+  border-bottom: 1px solid var(--border-color);
+
+  color: var(--text-color);
+}
+
+
+/* Stock Name */
+
+.recent-orders td:first-child {
+  color: var(--text-color) !important;
+
+  font-weight: 600;
+}
+
+
+/* BUY */
+
+.recent-orders .buy-text {
+  color: #16a34a !important;
+
+  font-weight: bold;
+}
+
+
+/* SELL */
+
+.recent-orders .sell-text {
+  color: #dc2626 !important;
+
+  font-weight: bold;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+[data-theme="dark"] .summary-card,
+[data-theme="dark"] .portfolio-card,
+[data-theme="dark"] .recent-orders {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .summary-container {
+    padding: 15px;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card h2 {
+    font-size: 24px;
+  }
+
+  .username h2 {
+    font-size: 22px;
+  }
+
+  .recent-orders {
+    overflow-x: auto;
+  }
+
+  .recent-orders table {
+    min-width: 500px;
+  }
+}

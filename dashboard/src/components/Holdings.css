@@ -1,0 +1,788 @@
+ 
+/* ===========================
+   HOLDINGS PAGE
+=========================== */
+
+.holdings-page {
+  padding: 25px;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.holdings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.holdings-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+/* ===========================
+   SEARCH BOX
+=========================== */
+
+.search-holding {
+  width: 280px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  background: white;
+  font-size: 15px;
+  transition: .3s;
+  outline: none;
+}
+
+.search-holding:focus {
+  border-color: #387ed1;
+  box-shadow: 0 0 0 4px rgba(56,126,209,.15);
+}
+
+
+
+/* ===========================
+   SUMMARY CARDS
+=========================== */
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: .3s;
+  border: 1px solid transparent;
+}
+
+.summary-card:hover {
+  transform: translateY(-6px);
+  border-color: #387ed1;
+}
+
+.summary-card h5 {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.summary-card h2 {
+  margin-top: 14px;
+  font-size: 28px;
+  color: #222;
+  font-weight: 700;
+}
+
+.summary-card small {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Profit */
+
+.summary-card.profit {
+  background: #effcf5;
+}
+
+.summary-card.profit h2,
+.summary-card.profit small {
+  color: #0f9d58;
+}
+
+/* Loss */
+
+.summary-card.loss {
+  background: #fff1f1;
+}
+
+.summary-card.loss h2,
+.summary-card.loss small {
+  color: #d93025;
+}
+
+/* ===========================
+   TABLE CARD
+=========================== */
+
+.holding-table-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  overflow-x: auto;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.holding-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.holding-table-card thead {
+  background: #387ed1;
+}
+
+.holding-table-card thead th {
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.holding-table-card tbody td {
+  padding: 18px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  font-size: 15px;
+}
+
+.holding-table-card tbody tr:nth-child(even) {
+  background: #fafbfc;
+}
+
+.holding-table-card tbody tr:hover {
+  background: #eef6ff;
+  transition: .3s;
+}
+
+/* ===========================
+   PROFIT LOSS
+=========================== */
+
+.profit {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.loss {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ===================================
+   SELL BUTTON
+=================================== */
+
+.sell {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.sell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(220, 38, 38, .30);
+}
+
+.sell:active {
+  transform: scale(.95);
+}
+
+/* ===================================
+   GRAPH CARD
+=================================== */
+
+.graph-card {
+  margin-top: 30px;
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.graph-card h3 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  color: #222;
+}
+
+.graph-card p {
+  margin-bottom: 25px;
+  color: #666;
+  
+  font-size: 14px;
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+.holding-table-card::-webkit-scrollbar {
+  height: 8px;
+}
+
+.holding-table-card::-webkit-scrollbar-thumb {
+  background: #387ed1;
+  border-radius: 20px;
+}
+
+.holding-table-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* ===================================
+   DARK THEME
+=================================== */
+
+body.dark {
+  background: #0f172a;
+}
+
+body.dark .holdings-page {
+  background: #0f172a;
+}
+
+body.dark .holding-table-card,
+body.dark .summary-card,
+body.dark .graph-card {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark .summary-card h2,
+body.dark .summary-card h5,
+body.dark .holdings-header h2,
+body.dark .graph-card h3 {
+  color: white;
+}
+
+body.dark .graph-card p {
+  color: #cbd5e1;
+}
+
+body.dark .holding-table-card tbody tr:nth-child(even) {
+  background: #263548;
+}
+
+body.dark .holding-table-card tbody tr:hover {
+  background: #334155;
+}
+
+body.dark .holding-table-card tbody td {
+  border-bottom: 1px solid #334155;
+  color: white;
+}
+
+body.dark .search-holding {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+body.dark .search-holding::placeholder {
+  color: #cbd5e1;
+}
+
+body.dark .holding-table-card thead {
+  background: #2563eb;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 992px) {
+
+  .summary-cards {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .holdings-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-holding {
+    width: 100%;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .holding-table-card {
+    padding: 15px;
+  }
+
+  .holding-table-card table {
+    min-width: 900px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .holdings-header h2 {
+    font-size: 22px;
+  }
+
+  .summary-card h2 {
+    font-size: 22px;
+  }
+
+  .graph-card h3 {
+    font-size: 20px;
+  }
+
+}
+
+/* ===================================
+   SELL BUTTON
+=================================== */
+
+.sell {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.sell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(220, 38, 38, .30);
+}
+
+.sell:active {
+  transform: scale(.95);
+}
+
+/* ===================================
+   GRAPH CARD
+=================================== */
+
+.graph-card {
+  margin-top: 30px;
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.graph-card h3 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  color: #222;
+}
+
+.graph-card p {
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+.holding-table-card::-webkit-scrollbar {
+  height: 8px;
+}
+
+.holding-table-card::-webkit-scrollbar-thumb {
+  background: #387ed1;
+  border-radius: 20px;
+}
+
+.holding-table-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* ===================================
+   DARK THEME
+=================================== */
+
+body.dark {
+  background: #0f172a;
+}
+
+body.dark .holdings-page {
+  background: #0f172a;
+}
+
+body.dark .holding-table-card,
+body.dark .summary-card,
+body.dark .graph-card {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark .summary-card h2,
+body.dark .summary-card h5,
+body.dark .holdings-header h2,
+body.dark .graph-card h3 {
+  color: white;
+}
+
+body.dark .graph-card p {
+  color: #cbd5e1;
+}
+
+body.dark .holding-table-card tbody tr:nth-child(even) {
+  background: #263548;
+}
+
+body.dark .holding-table-card tbody tr:hover {
+  background: #334155;
+}
+
+body.dark .holding-table-card tbody td {
+  border-bottom: 1px solid #334155;
+  color: white;
+}
+
+body.dark .search-holding {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+body.dark .search-holding::placeholder {
+  color: #cbd5e1;
+}
+
+body.dark .holding-table-card thead {
+  background: #2563eb;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 992px) {
+
+  .summary-cards {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .holdings-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-holding {
+    width: 100%;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .holding-table-card {
+    padding: 15px;
+  }
+
+  .holding-table-card table {
+    min-width: 900px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .holdings-header h2 {
+    font-size: 22px;
+  }
+
+  .summary-card h2 {
+    font-size: 22px;
+  }
+
+  .graph-card h3 {
+    font-size: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   HOLDINGS CONTROLS
+=========================== */
+
+.holdings-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.holding-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.holding-filter-btn {
+  padding: 9px 18px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #555;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.holding-filter-btn:hover {
+  border-color: #387ed1;
+  color: #387ed1;
+}
+
+.holding-filter-btn.active {
+  background: #387ed1;
+  border-color: #387ed1;
+  color: #fff;
+}
+
+.holding-filter-btn.profit-filter.active {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+.holding-filter-btn.loss-filter.active {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* ===========================
+   SORT
+=========================== */
+
+.holding-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.holding-sort label {
+  color: #666;
+  font-size: 14px;
+}
+
+.holding-sort select {
+  height: 40px;
+  min-width: 190px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #333;
+
+  outline: none;
+  cursor: pointer;
+}
+
+/* ===========================
+   EMPTY HOLDINGS
+=========================== */
+
+.empty-holdings {
+  padding: 60px 20px !important;
+  text-align: center !important;
+}
+
+.empty-holding-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-holding-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background: #f1f5f9;
+
+  font-size: 25px;
+}
+
+.empty-holding-content h3 {
+  margin: 0 0 7px;
+  color: #334155;
+  font-size: 18px;
+}
+
+.empty-holding-content p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark .holding-filter-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+body.dark .holding-filter-btn:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+body.dark .holding-filter-btn.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+body.dark .holding-filter-btn.profit-filter.active {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+body.dark .holding-filter-btn.loss-filter.active {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+body.dark .holding-sort label {
+  color: #94a3b8;
+}
+
+body.dark .holding-sort select {
+  background: #334155;
+  border-color: #475569;
+  color: #fff;
+}
+
+body.dark .empty-holding-icon {
+  background: #334155;
+}
+
+body.dark .empty-holding-content h3 {
+  color: #e2e8f0;
+}
+
+body.dark .empty-holding-content p {
+  color: #94a3b8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+  .holdings-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .holding-filters {
+    width: 100%;
+  }
+
+  .holding-filter-btn {
+    flex: 1;
+    padding: 9px 8px;
+  }
+
+  .holding-sort {
+    justify-content: space-between;
+  }
+
+  .holding-sort select {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .holding-filters {
+    gap: 5px;
+  }
+
+  .holding-filter-btn {
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+
+  .holding-sort {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .holding-sort select {
+    width: 100%;
+  }
+}

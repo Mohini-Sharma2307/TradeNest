@@ -1,0 +1,222 @@
+.open-account-section {
+  padding: 90px 0;
+
+  background: linear-gradient(
+    135deg,
+    #f8fbff 0%,
+    #ffffff 50%,
+    #f5f9fe 100%
+  );
+
+  
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.open-account-content {
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.open-account-tag {
+  display: inline-block;
+
+  margin-bottom: 16px;
+  padding: 6px 13px;
+
+  color: #387ed1;
+  background: #edf5fd;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.open-account-content h2 {
+  margin-bottom: 18px;
+
+  color: #222222;
+
+  font-size: 42px;
+  font-weight: 600;
+
+  letter-spacing: -1px;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.open-account-content > p {
+  max-width: 620px;
+
+  margin: 0 auto 30px;
+
+  color: #666666;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.open-account-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 160px;
+
+  padding: 13px 28px;
+
+  background: #387ed1;
+  color: #ffffff;
+
+  border: 1px solid #387ed1;
+  border-radius: 7px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.open-account-btn:hover {
+  background: #2f6fba;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(56, 126, 209, 0.25);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.open-account-features {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+
+  margin-top: 25px;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark .open-account-section {
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #111827 50%,
+    #0f172a 100%
+  );
+
+  border-top-color: #334155;
+  border-bottom-color: #334155;
+}
+
+body.dark .open-account-tag {
+  color: #60a5fa;
+  background: #1e293b;
+}
+
+body.dark .open-account-content h2 {
+  color: #ffffff;
+}
+
+body.dark .open-account-content > p {
+  color: #cbd5e1;
+}
+
+body.dark .open-account-btn {
+  background: #387ed1;
+  color: #ffffff;
+
+  border-color: #387ed1;
+}
+
+body.dark .open-account-btn:hover {
+  background: #2f6fba;
+  color: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .open-account-features {
+  color: #94a3b8;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .open-account-section {
+    padding: 70px 0;
+  }
+
+  .open-account-content h2 {
+    font-size: 34px;
+  }
+
+  .open-account-content > p {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .open-account-section {
+    padding: 55px 20px;
+  }
+
+  .open-account-content h2 {
+    font-size: 30px;
+  }
+
+  .open-account-content > p {
+    font-size: 15px;
+  }
+
+  .open-account-features {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+}

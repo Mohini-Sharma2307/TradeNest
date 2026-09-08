@@ -1,0 +1,87 @@
+/* ===================================
+   PORTFOLIO CHART CARD
+=================================== */
+
+.portfolio-chart {
+  margin-top: 30px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  color: #222;
+
+  transition: all 0.3s ease;
+}
+
+
+/* ===================================
+   TITLE
+=================================== */
+
+.portfolio-chart h3 {
+  margin: 0;
+
+  margin-bottom: 20px;
+
+  font-size: 24px;
+
+  color: #222;
+
+  font-weight: 600;
+}
+
+
+/* ===================================
+   CHART
+=================================== */
+
+.portfolio-chart canvas {
+  max-width: 100%;
+}
+
+
+/* ===================================
+   DARK THEME
+=================================== */
+
+body.dark .portfolio-chart {
+  background: #1e293b;
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .portfolio-chart h3 {
+  color: white;
+}
+
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+  .portfolio-chart {
+    padding: 20px;
+  }
+
+  .portfolio-chart h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-chart {
+    padding: 15px;
+  }
+
+  .portfolio-chart h3 {
+    font-size: 18px;
+  }
+}

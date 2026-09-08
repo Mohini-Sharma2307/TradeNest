@@ -1,0 +1,160 @@
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.education-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-image {
+  width: 70%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.education-content {
+  padding-left: 35px;
+}
+
+.education-content h2 {
+  margin-bottom: 20px;
+
+  color: #222222;
+
+  font-size: 38px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  letter-spacing: -0.8px;
+}
+
+.education-content p {
+  max-width: 560px;
+
+  margin-bottom: 18px;
+
+  color: #666666;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.education-second-text {
+  margin-top: 45px;
+}
+
+.education-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #387ed1;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.education-link:hover {
+  color: #2f6fba;
+  gap: 14px;
+}
+
+.education-link i {
+  font-size: 14px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark .education-section {
+  background: #0f172a;
+}
+
+body.dark .education-content h2 {
+  color: #ffffff;
+}
+
+body.dark .education-content p {
+  color: #cbd5e1;
+}
+
+body.dark .education-link {
+  color: #60a5fa;
+}
+
+body.dark .education-link:hover {
+  color: #93c5fd;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .education-section {
+    padding: 70px 0;
+  }
+
+  .education-image {
+    width: 80%;
+  }
+
+  .education-content {
+    padding-left: 0;
+    margin-top: 45px;
+  }
+
+  .education-content h2 {
+    font-size: 34px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .education-section {
+    padding: 55px 0;
+  }
+
+  .education-image {
+    width: 90%;
+  }
+
+  .education-content {
+    margin-top: 35px;
+  }
+
+  .education-content h2 {
+    font-size: 30px;
+  }
+
+  .education-content p {
+    font-size: 16px;
+  }
+
+  .education-second-text {
+    margin-top: 35px;
+  }
+}

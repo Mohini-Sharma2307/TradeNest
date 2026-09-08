@@ -1,0 +1,323 @@
+/* =========================================
+   BROKERAGE SECTION
+========================================= */
+
+.brokerage-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.brokerage-header {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.brokerage-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  background: #eef5fc;
+  color: #387ed1;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brokerage-header h2 {
+  margin-bottom: 12px;
+  color: #222222;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.brokerage-header p {
+  margin: 0;
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.brokerage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brokerage-card {
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.brokerage-card:hover {
+  transform: translateY(-5px);
+  border-color: #cfe0f3;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.brokerage-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: #f1f6fc;
+  border-radius: 12px;
+
+  font-size: 23px;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.brokerage-card h3 {
+  margin-bottom: 12px;
+  color: #333333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.brokerage-card p {
+  margin-bottom: 20px;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.brokerage-link {
+  color: #387ed1;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.brokerage-link:hover {
+  color: #2f6fba;
+}
+
+
+/* =========================================
+   ADDITIONAL CHARGES
+========================================= */
+
+.additional-charges {
+  max-width: 900px;
+  margin: 55px auto 0;
+  padding: 30px;
+
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+}
+
+.additional-charges h3 {
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.additional-charges ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.additional-charges li {
+  margin-bottom: 12px;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.additional-charges li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .brokerage-section {
+  background: #0f172a;
+}
+
+body.dark .brokerage-tag {
+  background: #1e293b;
+  color: #60a5fa;
+}
+
+body.dark .brokerage-header h2 {
+  color: #ffffff;
+}
+
+body.dark .brokerage-header p {
+  color: #cbd5e1;
+}
+
+body.dark .brokerage-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .brokerage-card:hover {
+  border-color: #475569;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+}
+
+body.dark .brokerage-icon {
+  background: #0f172a;
+}
+
+body.dark .brokerage-card h3 {
+  color: #ffffff;
+}
+
+body.dark .brokerage-card p {
+  color: #cbd5e1;
+}
+
+body.dark .brokerage-link {
+  color: #60a5fa;
+}
+
+body.dark .brokerage-link:hover {
+  color: #93c5fd;
+}
+
+body.dark .additional-charges {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .additional-charges h3 {
+  color: #ffffff;
+}
+
+body.dark .additional-charges li {
+  color: #cbd5e1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .brokerage-section {
+    padding: 60px 0;
+  }
+
+  .brokerage-header {
+    padding: 0 20px;
+  }
+
+  .brokerage-header h2 {
+    font-size: 32px;
+  }
+
+  .brokerage-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .additional-charges {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+  .brokerage-section {
+    padding: 50px 0;
+  }
+
+  .brokerage-header {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .brokerage-header h2 {
+    font-size: 29px;
+  }
+
+  .brokerage-header p {
+    font-size: 15px;
+  }
+
+  .brokerage-grid {
+    gap: 18px;
+    padding: 0 15px;
+  }
+
+  .brokerage-card {
+    padding: 25px;
+  }
+
+  .brokerage-card h3 {
+    font-size: 20px;
+  }
+
+  .brokerage-card p {
+    font-size: 14px;
+  }
+
+  .additional-charges {
+    margin: 35px 15px 0;
+    padding: 22px;
+  }
+
+  .additional-charges h3 {
+    font-size: 20px;
+  }
+
+  .additional-charges li {
+    font-size: 13px;
+  }
+}

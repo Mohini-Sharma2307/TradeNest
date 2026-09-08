@@ -1,0 +1,229 @@
+/* ===================================
+   ANALYTICS OVERLAY
+=================================== */
+
+.analytics-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+
+/* ===================================
+   ANALYTICS CARD
+=================================== */
+
+.analytics-box {
+  width: 420px;
+
+  background: white;
+
+  color: #222;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s;
+}
+
+
+/* ===================================
+   HEADER
+=================================== */
+
+.analytics-header {
+  background: #4184f3;
+
+  color: white;
+
+  padding: 16px;
+}
+
+.analytics-header h2 {
+  margin: 0;
+
+  font-size: 22px;
+
+  color: white;
+}
+
+
+/* ===================================
+   BODY
+=================================== */
+
+.analytics-body {
+  padding: 20px;
+
+  background: white;
+
+  color: #222;
+}
+
+
+/* ===================================
+   ANALYTICS ROW
+=================================== */
+
+.analytics-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+
+  font-size: 16px;
+
+  color: #222;
+}
+
+
+/* ===================================
+   PROFIT
+=================================== */
+
+.analytics-profit {
+  color: #16a34a !important;
+
+  font-weight: bold;
+}
+
+
+/* ===================================
+   LOSS
+=================================== */
+
+.analytics-loss {
+  color: #dc2626 !important;
+
+  font-weight: bold;
+}
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.analytics-footer {
+  padding: 15px;
+
+  text-align: right;
+
+  border-top: 1px solid #ddd;
+
+  background: white;
+}
+
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.analytics-footer button {
+  background: #4184f3;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 22px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.analytics-footer button:hover {
+  background: #2f6fd8;
+
+  transform: translateY(-2px);
+}
+
+
+/* ===================================
+   DARK THEME
+=================================== */
+
+body.dark .analytics-box {
+  background: #1e293b;
+
+  color: white;
+}
+
+body.dark .analytics-body {
+  background: #1e293b;
+
+  color: white;
+}
+
+body.dark .analytics-row {
+  color: white;
+}
+
+body.dark .analytics-footer {
+  background: #1e293b;
+
+  color: white;
+
+  border-top: 1px solid #334155;
+}
+
+
+/* Header stays blue */
+
+body.dark .analytics-header {
+  background: #4184f3;
+
+  color: white;
+}
+
+body.dark .analytics-header h2 {
+  color: white;
+}
+
+
+/* Profit */
+
+body.dark .analytics-profit {
+  color: #16a34a !important;
+}
+
+
+/* Loss */
+
+body.dark .analytics-loss {
+  color: #dc2626 !important;
+}
+
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 500px) {
+
+  .analytics-box {
+    width: calc(100% - 30px);
+  }
+
+}

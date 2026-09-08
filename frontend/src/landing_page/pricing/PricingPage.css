@@ -1,0 +1,97 @@
+/* =========================================
+   PRICING PAGE
+========================================= */
+
+.pricing-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+  color: #222222;
+}
+
+
+/* =========================================
+   PRICING HERO
+========================================= */
+
+.pricing-hero {
+  padding-bottom: 30px;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   BROKERAGE SECTION
+========================================= */
+
+.pricing-brokerage {
+  padding: 30px 0 70px;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   OPEN ACCOUNT CTA
+========================================= */
+
+.pricing-account {
+  padding: 20px 0 80px;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .pricing-page {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+body.dark .pricing-hero {
+  background: #0f172a;
+}
+
+body.dark .pricing-brokerage {
+  background: #0f172a;
+}
+
+body.dark .pricing-account {
+  background: #0f172a;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .pricing-brokerage {
+    padding: 20px 0 50px;
+  }
+
+  .pricing-account {
+    padding: 20px 0 55px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+  .pricing-hero {
+    padding-bottom: 10px;
+  }
+
+  .pricing-brokerage {
+    padding: 10px 0 40px;
+  }
+
+  .pricing-account {
+    padding: 10px 0 40px;
+  }
+}

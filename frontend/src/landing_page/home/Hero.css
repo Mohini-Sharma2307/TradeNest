@@ -1,0 +1,247 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  width: 100%;
+  padding: 70px 0 90px;
+  background: #ffffff;
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 55px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  margin: 0 0 18px;
+  color: #222222;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.hero-text > p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #666666;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.hero-signup-btn,
+.hero-learn-btn {
+  min-width: 150px;
+  padding: 13px 25px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* =========================================
+   SIGNUP BUTTON
+========================================= */
+
+.hero-signup-btn {
+  background: #387ed1;
+  color: #ffffff;
+  border: 1px solid #387ed1;
+}
+
+.hero-signup-btn:hover {
+  background: #2f6fba;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 126, 209, 0.25);
+}
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.hero-learn-btn {
+  background: #ffffff;
+  color: #387ed1;
+  border: 1px solid #387ed1;
+}
+
+.hero-learn-btn:hover {
+  background: #f5f8fc;
+  color: #2f6fba;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   TRUST
+========================================= */
+
+.hero-trust {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 25px;
+  color: #777777;
+  font-size: 14px;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .hero-section {
+  background: #0f172a;
+}
+
+body.dark .hero-text h1 {
+  color: #ffffff;
+}
+
+body.dark .hero-text > p {
+  color: #cbd5e1;
+}
+
+body.dark .hero-learn-btn {
+  background: #1e293b;
+  color: #60a5fa;
+  border-color: #387ed1;
+}
+
+body.dark .hero-learn-btn:hover {
+  background: #334155;
+  color: #93c5fd;
+}
+
+body.dark .hero-trust {
+  color: #94a3b8;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    padding: 45px 0 65px;
+  }
+
+  .hero-image-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .hero-text > p {
+    padding: 0 15px;
+    font-size: 17px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-signup-btn,
+  .hero-learn-btn {
+    width: 220px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .hero-section {
+    padding: 30px 0 50px;
+  }
+
+  .hero-image-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text > p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-trust {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

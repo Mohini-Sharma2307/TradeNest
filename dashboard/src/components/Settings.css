@@ -1,0 +1,104 @@
+.settings-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* =========================
+   SETTINGS CARD
+========================= */
+
+.settings-card {
+  width: 500px;
+  background: white;
+  color: #222;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.settings-card h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+}
+
+
+/* =========================
+   SETTING ITEM
+========================= */
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.setting-item button {
+  padding: 8px 15px;
+  border: none;
+  background: #387ed1;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.setting-item button:hover {
+  background: #2f6db5;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark .settings-card {
+  background: #1e293b;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .settings-card h2 {
+  color: white;
+}
+
+body.dark .setting-item {
+  color: #ffffff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .settings-container {
+    padding: 0 15px;
+    margin-top: 25px;
+  }
+
+  .settings-card {
+    width: 100%;
+    padding: 22px;
+  }
+
+  .setting-item {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,273 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background: #f6f8fb;
+  min-height: 100vh;
+}
+
+.profile-card {
+  width: 500px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  overflow: hidden;
+}
+
+.profile-top {
+  background: linear-gradient(135deg,#387ed1,#4a90e2);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: white;
+  color: #387ed1;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.profile-top h2 {
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+
+.profile-top p {
+  opacity: .9;
+}
+
+.edit-btn {
+  margin-top: 18px;
+  background: white;
+  color: #387ed1;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.profile-body {
+  padding: 25px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-title {
+  color: #666;
+  font-weight: 500;
+}
+
+.info-value {
+  color: #222;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.save-btn {
+  background: #387ed1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #efefef;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+ 
+
+ .profile-card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.edit-btn:hover{
+  background: #dddddd;
+}
+.save-btn:hover {
+   background: #2d6db7; 
+}
+
+.cancel-btn:hover {
+  background: #dddddd;
+}
+
+.info-row:hover {
+  background: #fafafa;
+}
+
+.profile-avatar {
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+
+/* ================= DARK THEME ================= */
+
+body.dark .profile-container {
+
+  background: #0f172a;
+}
+
+body.dark .profile-card {
+  background: #1e293b;
+  color: #f8fafc;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .profile-top {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+}
+
+body.dark .profile-avatar {
+  background: #f8fafc;
+  color: #2563eb;
+}
+
+body.dark .profile-top p {
+  color: #e2e8f0;
+}
+
+body.dark .profile-body {
+  background: #1e293b;
+}
+
+body.dark .info-row {
+  border-bottom: 1px solid #334155;
+}
+
+body.dark .info-row:hover {
+  background: #273449;
+}
+
+body.dark .info-title {
+  color: #cbd5e1;
+}
+
+body.dark .info-value {
+  color: #ffffff;
+}
+
+body.dark .form-group label {
+  color: #f8fafc;
+}
+
+body.dark .form-group input {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+body.dark .form-group input::placeholder {
+  color: #94a3b8;
+}
+
+body.dark .edit-btn {
+  background: white;
+  color: #2563eb;
+}
+
+body.dark .edit-btn:hover {
+  background: #e5e7eb;
+}
+
+body.dark .save-btn {
+  background: #2563eb;
+}
+
+body.dark .save-btn:hover {
+  background: #1d4ed8;
+}
+
+body.dark .cancel-btn {
+  background: #475569;
+  color: white;
+}
+
+body.dark .cancel-btn:hover {
+  background: #64748b;
+}  
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 20px 15px;
+  }
+
+  .profile-card {
+    max-width: 100%;
+  }
+
+  .profile-top {
+    padding: 30px 15px;
+  }
+
+  .profile-body {
+    padding: 20px;
+  }
+
+  .info-row {
+    gap: 15px;
+  }
+
+  .info-value {
+    text-align: right;
+  }
+}
