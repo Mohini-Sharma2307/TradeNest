@@ -1,25 +1,13 @@
-import React, {
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-
 import API from "../api/api";
-
 import GeneralContext from "./GeneralContext";
-
 import "./Menu.css";
 
 const Menu = () => {
-  const {
-    profile,
-    updateProfile,
-  } = useContext(GeneralContext);
+  const { profile, updateProfile } = useContext(GeneralContext);
 
-  const [isProfileDropdownOpen, setIsProfileDropdownOpen] =
-    useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   // =========================
   // LOAD PROFILE
@@ -64,26 +52,14 @@ const Menu = () => {
   // LOGOUT
   // =========================
 
-  // const logout = () => {
-  //   localStorage.removeItem("token");
-
-  //   window.location.href = "http://localhost:3000/";
-  // };
-
-
-
-
-
   const logout = () => {
-  // Current theme get karo
-  const theme = localStorage.getItem("theme") || "light";
-
-  // Token remove karo
-  localStorage.removeItem("token");
-
-  // Frontend ko theme ke saath open karo
-  window.location.href = `http://localhost:3000/?theme=${theme}`;
-};
+    // Current theme get karo
+    const theme = localStorage.getItem("theme") || "light";
+    // Token remove karo
+    localStorage.removeItem("token");
+    // Frontend ko theme ke saath open karo
+    window.location.href = `https://tradenest-frontend-b84l.onrender.com/?theme=${theme}`;
+  };
 
   // =========================
   // USER NAME
@@ -106,16 +82,11 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-
       {/* =========================
           LOGO
       ========================= */}
 
-      <Link
-        to="/"
-        className="logo-link"
-        onClick={closeDropdown}
-      >
+      <Link to="/" className="logo-link" onClick={closeDropdown}>
         <img
           src="https://github.com/apna-college/zerodha-clone/blob/36-plotting-graphs-with-chartJS/dashboard/public/logo.png?raw=true"
           alt="Zerodha Logo"
@@ -128,16 +99,12 @@ const Menu = () => {
       ========================= */}
 
       <div className="menus">
-
         <ul>
-
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? "menu selected"
-                  : "menu"
+                isActive ? "menu selected" : "menu"
               }
               onClick={closeDropdown}
             >
@@ -149,9 +116,7 @@ const Menu = () => {
             <NavLink
               to="/orders"
               className={({ isActive }) =>
-                isActive
-                  ? "menu selected"
-                  : "menu"
+                isActive ? "menu selected" : "menu"
               }
               onClick={closeDropdown}
             >
@@ -163,9 +128,7 @@ const Menu = () => {
             <NavLink
               to="/holdings"
               className={({ isActive }) =>
-                isActive
-                  ? "menu selected"
-                  : "menu"
+                isActive ? "menu selected" : "menu"
               }
               onClick={closeDropdown}
             >
@@ -177,9 +140,7 @@ const Menu = () => {
             <NavLink
               to="/positions"
               className={({ isActive }) =>
-                isActive
-                  ? "menu selected"
-                  : "menu"
+                isActive ? "menu selected" : "menu"
               }
               onClick={closeDropdown}
             >
@@ -191,16 +152,13 @@ const Menu = () => {
             <NavLink
               to="/funds"
               className={({ isActive }) =>
-                isActive
-                  ? "menu selected"
-                  : "menu"
+                isActive ? "menu selected" : "menu"
               }
               onClick={closeDropdown}
             >
               Funds
             </NavLink>
           </li>
-
         </ul>
 
         <hr />
@@ -210,24 +168,14 @@ const Menu = () => {
         ========================= */}
 
         <div className="profile">
-
-          <div
-            className="profile-trigger"
-            onClick={handleProfileClick}
-          >
-
+          <div className="profile-trigger" onClick={handleProfileClick}>
             {/* Dynamic Avatar */}
 
-            <div className="avatar">
-              {initials || "U"}
-            </div>
+            <div className="avatar">{initials || "U"}</div>
 
             {/* Dynamic Name */}
 
-            <p className="username">
-              {userName}
-            </p>
-
+            <p className="username">{userName}</p>
           </div>
 
           {/* =========================
@@ -236,7 +184,6 @@ const Menu = () => {
 
           {isProfileDropdownOpen && (
             <div className="profile-dropdown">
-
               {/* PROFILE */}
 
               <Link
@@ -244,9 +191,7 @@ const Menu = () => {
                 className="dropdown-item"
                 onClick={closeDropdown}
               >
-                <span className="dropdown-icon">
-                  👤
-                </span>
+                <span className="dropdown-icon">👤</span>
 
                 <span>Profile</span>
               </Link>
@@ -258,9 +203,7 @@ const Menu = () => {
                 className="dropdown-item"
                 onClick={closeDropdown}
               >
-                <span className="dropdown-icon">
-                  ⚙️
-                </span>
+                <span className="dropdown-icon">⚙️</span>
 
                 <span>Settings</span>
               </Link>
@@ -276,20 +219,14 @@ const Menu = () => {
                 className="dropdown-item logout-item"
                 onClick={logout}
               >
-                <span className="dropdown-icon">
-                  🚪
-                </span>
+                <span className="dropdown-icon">🚪</span>
 
                 <span>Logout</span>
               </button>
-
             </div>
           )}
-
         </div>
-
       </div>
-
     </div>
   );
 };
